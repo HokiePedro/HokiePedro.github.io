@@ -15563,21 +15563,21 @@ var Homepage = function (_Component) {
                   _IconButton2.default,
                   { href: _configs2.default.urls.github, target: '_blank', style: styles.urlIconButtons },
                   ' ',
-                  _react2.default.createElement('img', { src: 'src/img/github.svg', height: '48px' }),
+                  _react2.default.createElement('img', { src: 'img/github.svg', height: '48px' }),
                   ' '
                 ),
                 _react2.default.createElement(
                   _IconButton2.default,
                   { href: _configs2.default.urls.linkedin, target: '_blank', style: styles.urlIconButtons },
                   ' ',
-                  _react2.default.createElement('img', { src: 'src/img/linkedin.svg', height: '48px' }),
+                  _react2.default.createElement('img', { src: 'img/linkedin.svg', height: '48px' }),
                   ' '
                 ),
                 _react2.default.createElement(
                   _IconButton2.default,
                   { href: _configs2.default.urls.gitlab, target: '_blank', style: styles.urlIconButtons },
                   ' ',
-                  _react2.default.createElement('img', { src: 'src/img/gitlab.svg', height: '48px' }),
+                  _react2.default.createElement('img', { src: 'img/gitlab.svg', height: '48px' }),
                   ' '
                 ),
                 _react2.default.createElement(
@@ -15842,14 +15842,14 @@ var gridList = {
 var aboutMeImage = {
   height: '350px',
   width: '350px',
-  backgroundImage: 'url(' + 'src/img/PedroSorto.jpg' + ')',
+  backgroundImage: 'url(' + 'img/PedroSorto.jpg' + ')',
   backgroundSize: '350px',
   margin: '20px'
 };
 var personalMeImage = {
   height: '345px',
   width: '350px',
-  backgroundImage: 'url(' + 'src/img/personalPedro.JPG' + ')',
+  backgroundImage: 'url(' + 'img/personalPedro.JPG' + ')',
   backgroundSize: '350px',
   marginLeft: '120px',
   marginRight: '120px'
