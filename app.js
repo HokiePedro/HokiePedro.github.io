@@ -15376,7 +15376,7 @@ var Homepage = function (_Component) {
                 ),
                 _react2.default.createElement(
                   'div',
-                  { style: styles.personalDetailsTextStyle },
+                  { id: 'personalDetailsText', style: styles.personalDetailsTextStyle },
                   _configs2.default.content.personalDetails.sectionOne,
                   _react2.default.createElement('br', null),
                   _react2.default.createElement('br', null),
@@ -15789,7 +15789,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var mainContainer = {
   display: 'flex',
-  flexDirection: 'column'
+  flexDirection: 'column',
+  width: '100%'
 };
 var rightElementStyling = {
   marginTop: '10px'
@@ -15902,7 +15903,8 @@ var personalDetailsStyle = {
   width: '350px',
   marginLeft: '120px',
   marginRight: '120px',
-  fontWeight: 100
+  fontWeight: 100,
+  marginBottom: '30px'
 };
 var personalDetailsTextStyle = {
   display: 'flex',
