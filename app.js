@@ -15410,7 +15410,7 @@ var Homepage = function (_Component) {
               _react2.default.createElement(
                 _Paper2.default,
                 { zDepth: 0, style: {
-                    height: '350px', width: '500px', fontWeight: 100, margin: '0px 60px 30px 60px' } },
+                    height: '350px', width: '500px', fontWeight: 100, margin: '0px 40px 30px 10px' } },
                 _react2.default.createElement(
                   'h3',
                   { style: styles.pHeaderStyle },
@@ -15890,7 +15890,7 @@ var personalMeImage = {
   width: '350px',
   backgroundImage: 'url(' + 'img/personalPedro.JPG' + ')',
   backgroundSize: '350px',
-  margin: '0px 60px 30px 60px'
+  margin: '0px 0px 30px 0px'
 };
 var workExperienceImage = {
   height: '58px',
@@ -15939,7 +15939,7 @@ var personalDetailsStyle = {
   height: '350px',
   width: '350px',
   fontWeight: 100,
-  margin: '0px 60px 30px 60px'
+  margin: '0px 0px 30px 0px'
 };
 var personalDetailsTextStyle = {
   display: 'flex',
@@ -15958,7 +15958,7 @@ var professionalLifeContainer = (_professionalLifeCont = {
   display: 'flex',
   flexDirection: 'row',
   justifyContent: 'center',
-  margin: '20px 40px 160px 40px',
+  margin: '20px 10px 160px 10px',
   paddingTop: 120
 }, (0, _defineProperty3.default)(_professionalLifeCont, 'justifyContent', 'space-around'), (0, _defineProperty3.default)(_professionalLifeCont, 'alignItems', 'center'), _professionalLifeCont);
 var professionalLifeContents = {
@@ -15977,12 +15977,12 @@ var professionalLifePaperStyle = {
   height: '350px',
   width: '350px',
   zIndex: 1,
-  margin: '30px'
+  margin: '10px'
 };
 var professionalDetailsPaper = {
   height: '350px',
   width: '350px',
-  margin: '30px'
+  margin: '10px'
 };
 var professionalRolesStyle = {
   display: 'flex',
@@ -15990,7 +15990,7 @@ var professionalRolesStyle = {
   fontSize: '14px',
   fontFamily: 'sans-serif',
   lineHeight: 4,
-  margin: '30px'
+  margin: '10px'
 };
 var professionalTextPaperStyle = {
   height: '350px',
