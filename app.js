@@ -16053,7 +16053,8 @@ var experienceYearFormat = {
 
 var experienceDetailsFormat = {
   height: '150px',
-  width: '350px'
+  width: '350px',
+  marginLeft: '40px'
 };
 
 var experienceTitleFormat = {
