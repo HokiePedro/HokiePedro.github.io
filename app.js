@@ -16000,7 +16000,7 @@ var professionalRolesStyle = {
 };
 var professionalTextPaperStyle = {
   height: '350px',
-  width: '350px',
+  width: '500px',
   fontWeight: 100
 };
 var professionalTextStyle = {
