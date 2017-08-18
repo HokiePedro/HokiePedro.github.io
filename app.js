@@ -15409,7 +15409,8 @@ var Homepage = function (_Component) {
               { style: styles.personalDetailsContentStyle },
               _react2.default.createElement(
                 _Paper2.default,
-                { zDepth: 0, style: styles.personalDetailsStyle },
+                { zDepth: 0, style: {
+                    height: '350px', width: '500px', fontWeight: 100, margin: '0px 60px 30px 60px' } },
                 _react2.default.createElement(
                   'h3',
                   { style: styles.pHeaderStyle },
@@ -15975,18 +15976,21 @@ var professionalIconsContainer = {
 var professionalLifePaperStyle = {
   height: '350px',
   width: '350px',
-  zIndex: 1
+  zIndex: 1,
+  margin: '30px'
 };
 var professionalDetailsPaper = {
   height: '350px',
-  width: '350px'
+  width: '350px',
+  margin: '30px'
 };
 var professionalRolesStyle = {
   display: 'flex',
   flexDirection: 'column',
   fontSize: '14px',
   fontFamily: 'sans-serif',
-  lineHeight: 4
+  lineHeight: 4,
+  margin: '30px'
 };
 var professionalTextPaperStyle = {
   height: '350px',
