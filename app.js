@@ -15977,7 +15977,7 @@ var professionalIconsContainer = {
   flexDirection: 'row',
   flexWrap: 'wrap',
   justifyContent: 'space-around',
-  alignItems: 'center'
+  alignItems: 'baseline'
 };
 var professionalLifePaperStyle = {
   height: '350px',
