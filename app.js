@@ -15258,29 +15258,41 @@ var Homepage = function (_Component) {
     _this.state = {
       openAboutPopover: false,
       aboutMenuAnchor: undefined,
-      windowHeight: window.innerHeight,
-      windowWidth: window.innerWidth
+      width: window.innerWidth
     };
     return _this;
   }
 
   (0, _createClass3.default)(Homepage, [{
-    key: 'handleResize',
-    value: function handleResize(e) {
-      this.setState({
-        windowHeight: window.innerHeight,
-        windowWidth: window.innerWidth
-      });
+    key: 'updateDimensions',
+    value: function updateDimensions() {
+      if (window.innerWidth < 500) {
+        this.setState({ width: 450 });
+      } else {
+        var update_width = window.innerWidth - 0;
+        this.setState({ width: update_width });
+      }
     }
+
+    /**
+     * Add event listener
+     */
+
   }, {
     key: 'componentDidMount',
     value: function componentDidMount() {
-      window.addEventListener('resize', this.handleResize.bind(this));
+      this.updateDimensions();
+      window.addEventListener("resize", this.updateDimensions.bind(this));
     }
+
+    /**
+     * Remove event listener
+     */
+
   }, {
     key: 'componentWillUnmount',
     value: function componentWillUnmount() {
-      window.removeEventListener('resize', this.handleResize.bind(this));
+      window.removeEventListener("resize", this.updateDimensions.bind(this));
     }
   }, {
     key: 'render',
@@ -15332,7 +15344,7 @@ var Homepage = function (_Component) {
 
       return _react2.default.createElement(
         'div',
-        { id: 'topContainer', style: { display: 'flex', flexDirection: 'column', width: this.state.windowWidth, height: '100%' } },
+        { id: 'topContainer', style: { width: this.state.width, display: 'flex', flexDirection: 'column' } },
         _react2.default.createElement(
           _Paper2.default,
           { id: 'mainTitle', elevation: 3, style: styles.landing },
@@ -15396,7 +15408,7 @@ var Homepage = function (_Component) {
                 ),
                 _react2.default.createElement(
                   'div',
-                  { id: 'personalDetailsText', style: styles.personalDetailsTextStyle },
+                  { id: '', style: styles.personalDetailsTextStyle },
                   _configs2.default.content.personalDetails.sectionOne,
                   _react2.default.createElement('br', null),
                   _react2.default.createElement('br', null),
@@ -15809,8 +15821,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var mainContainer = {
   display: 'flex',
-  flexDirection: 'column',
-  width: '100%'
+  flexDirection: 'column'
 };
 var rightElementStyling = {
   marginTop: '10px'
@@ -15848,8 +15859,7 @@ var landing = {
   backgroundColor: '#D3CAC5',
   backgroundPosition: '22% 70%',
   backgroundSize: 'cover',
-  height: 1000,
-  width: '100%'
+  height: 1000
 };
 var root = {
   display: 'flex',
@@ -15995,7 +16005,6 @@ var experienceContainer = {
   paddingTop: 120
 };
 var experienceRolesContainer = {
-  width: '100%',
   display: 'flex',
   flexDirection: 'column'
 };
@@ -16052,7 +16061,6 @@ var contactContainer = {
 };
 
 var contactIconContainer = {
-  width: '100%',
   display: 'flex',
   flexDirection: 'column',
   backgroundColor: 'none'
