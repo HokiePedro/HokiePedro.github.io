@@ -15959,7 +15959,7 @@ var professionalIconsContainer = {
   display: 'flex',
   flexDirection: 'row',
   flexWrap: 'wrap',
-  justifyContent: 'space-between',
+  justifyContent: 'space-around',
   alignItems: 'center'
 };
 var professionalLifePaperStyle = {
