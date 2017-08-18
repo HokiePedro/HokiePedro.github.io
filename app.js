@@ -15817,6 +15817,8 @@ var _defineProperty2 = __webpack_require__(186);
 
 var _defineProperty3 = _interopRequireDefault(_defineProperty2);
 
+var _professionalLifeCont;
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var mainContainer = {
@@ -15877,9 +15879,7 @@ var personalMeImage = {
   height: '345px',
   width: '350px',
   backgroundImage: 'url(' + 'img/personalPedro.JPG' + ')',
-  backgroundSize: '350px',
-  marginLeft: '120px',
-  marginRight: '120px'
+  backgroundSize: '350px'
 };
 var workExperienceImage = {
   height: '58px',
@@ -15927,8 +15927,6 @@ var personalLifeElements = {
 var personalDetailsStyle = {
   height: '350px',
   width: '350px',
-  marginLeft: '120px',
-  marginRight: '120px',
   fontWeight: 100,
   marginBottom: '30px'
 };
@@ -15945,13 +15943,13 @@ var personalDetailsContentStyle = {
   justifyContent: 'space-around',
   flexWrap: 'wrap'
 };
-var professionalLifeContainer = (0, _defineProperty3.default)({
+var professionalLifeContainer = (_professionalLifeCont = {
   display: 'flex',
   flexDirection: 'row',
   justifyContent: 'center',
   margin: '20px 40px 160px 40px',
   paddingTop: 120
-}, 'justifyContent', 'space-around');
+}, (0, _defineProperty3.default)(_professionalLifeCont, 'justifyContent', 'space-around'), (0, _defineProperty3.default)(_professionalLifeCont, 'alignItems', 'center'), _professionalLifeCont);
 var professionalLifeContents = {
   display: 'flex',
   flexDirection: 'column',
@@ -15966,15 +15964,11 @@ var professionalIconsContainer = {
 var professionalLifePaperStyle = {
   height: '350px',
   width: '350px',
-  marginLeft: '40px',
-  marginRight: '40px',
   zIndex: 1
 };
 var professionalDetailsPaper = {
   height: '350px',
-  width: '350px',
-  marginLeft: '40px',
-  marginRight: '40px'
+  width: '350px'
 };
 var professionalRolesStyle = {
   display: 'flex',
@@ -15986,8 +15980,6 @@ var professionalRolesStyle = {
 var professionalTextPaperStyle = {
   height: '350px',
   width: '350px',
-  marginLeft: '40px',
-  marginRight: '40px',
   fontWeight: 100
 };
 var professionalTextStyle = {
@@ -16040,8 +16032,7 @@ var experienceYearFormat = {
 
 var experienceDetailsFormat = {
   height: '150px',
-  width: '350px',
-  marginLeft: '30px'
+  width: '350px'
 };
 
 var experienceTitleFormat = {
