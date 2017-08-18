@@ -15347,7 +15347,16 @@ var Homepage = function (_Component) {
         { id: 'topContainer', style: { width: this.state.width, display: 'flex', flexDirection: 'column' } },
         _react2.default.createElement(
           _Paper2.default,
-          { id: 'mainTitle', elevation: 3, style: styles.landing },
+          { id: 'mainTitle', elevation: 3, style: {
+              padding: 25,
+              position: 'relative', // For the boxShadow
+              backgroundImage: 'url(' + 'http://i.imgur.com/zfDtgcq.jpg' + ')',
+              backgroundColor: '#D3CAC5',
+              backgroundPosition: '22% 70%',
+              backgroundSize: 'cover',
+              height: 1000,
+              width: this.state.width
+            } },
           _react2.default.createElement(
             'div',
             { style: styles.titleStyling },
@@ -15879,7 +15888,8 @@ var personalMeImage = {
   height: '345px',
   width: '350px',
   backgroundImage: 'url(' + 'img/personalPedro.JPG' + ')',
-  backgroundSize: '350px'
+  backgroundSize: '350px',
+  margin: '0px 60px 30px 60px'
 };
 var workExperienceImage = {
   height: '58px',
@@ -15928,7 +15938,7 @@ var personalDetailsStyle = {
   height: '350px',
   width: '350px',
   fontWeight: 100,
-  marginBottom: '30px'
+  margin: '0px 60px 30px 60px'
 };
 var personalDetailsTextStyle = {
   display: 'flex',
