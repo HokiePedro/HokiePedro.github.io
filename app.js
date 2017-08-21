@@ -15430,7 +15430,11 @@ var Homepage = function (_Component) {
                     _configs2.default.content.personalDetails.sectionThree
                   )
                 ),
-                _react2.default.createElement(_Paper2.default, { zDepth: 2, style: styles.personalMeImage })
+                _react2.default.createElement(
+                  'div',
+                  { style: this.state.width > 1000 ? undefined : styles.personalImageSmall },
+                  _react2.default.createElement(_Paper2.default, { zDepth: 2, style: styles.personalMeImage })
+                )
               )
             )
           ),
@@ -15824,7 +15828,7 @@ var _temp = function () {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.professionalDetailsSmall = exports.personalDetailsTextSmall = exports.iconMenuTextStyle = exports.contactHeader = exports.contactIconContainer = exports.contactContainer = exports.experienceTitleFormat = exports.experienceDetailsFormat = exports.experienceYearFormat = exports.experienceIconBorder = exports.iconButtonContainer = exports.experiencesStyle = exports.experienceHeaderStyle = exports.experienceRolesContainer = exports.experienceContainer = exports.professionalTextSmall = exports.professionalTextStyle = exports.professionalTextPaperSmall = exports.professionalTextPaperStyle = exports.professionalRolesSmall = exports.professionalRolesStyle = exports.professionalDetailsPaper = exports.professionalLifePaperStyle = exports.professionalIconsContainer = exports.professionalLifeContents = exports.professionalLifeContainer = exports.personalDetailsContentStyle = exports.personalDetailsTextStyle = exports.personalDetailsStyle = exports.personalLifeElements = exports.titleStyling = exports.personalLifeContainer = exports.appBarNameStyle = exports.avatarStyles = exports.urlIconButtons = exports.pHeaderStyle = exports.scrollNav = exports.workExperienceImage = exports.personalMeImage = exports.aboutMeImage = exports.root = exports.landing = exports.contentHeaderStyle = exports.nameHeaderStyle = exports.appBarStyle = exports.GridStyle = exports.rightElementStyling = exports.mainContainer = undefined;
+exports.professionalDetailsSmall = exports.personalDetailsTextSmall = exports.iconMenuTextStyle = exports.contactHeader = exports.contactIconContainer = exports.contactContainer = exports.experienceTitleFormat = exports.experienceDetailsFormat = exports.experienceYearFormat = exports.experienceIconBorder = exports.iconButtonContainer = exports.experiencesStyle = exports.experienceHeaderStyle = exports.experienceRolesContainer = exports.experienceContainer = exports.professionalTextSmall = exports.professionalTextStyle = exports.professionalTextPaperSmall = exports.professionalTextPaperStyle = exports.professionalRolesSmall = exports.professionalRolesStyle = exports.professionalDetailsPaper = exports.professionalLifePaperStyle = exports.professionalIconsContainer = exports.professionalLifeContents = exports.professionalLifeContainer = exports.personalDetailsContentStyle = exports.personalDetailsTextStyle = exports.personalDetailsStyle = exports.personalLifeElements = exports.titleStyling = exports.personalLifeContainer = exports.appBarNameStyle = exports.avatarStyles = exports.urlIconButtons = exports.pHeaderStyle = exports.scrollNav = exports.workExperienceImage = exports.personalImageSmall = exports.personalMeImage = exports.aboutMeImage = exports.root = exports.landing = exports.contentHeaderStyle = exports.nameHeaderStyle = exports.appBarStyle = exports.GridStyle = exports.rightElementStyling = exports.mainContainer = undefined;
 
 var _defineProperty2 = __webpack_require__(186);
 
@@ -15895,6 +15899,12 @@ var personalMeImage = {
   backgroundSize: '350px',
   margin: '0px 0px 30px 0px'
 };
+var personalImageSmall = {
+  display: 'flex',
+  justifyContent: 'center',
+  width: '100%'
+};
+
 var workExperienceImage = {
   height: '58px',
   width: '260px',
@@ -16142,6 +16152,7 @@ exports.landing = landing;
 exports.root = root;
 exports.aboutMeImage = aboutMeImage;
 exports.personalMeImage = personalMeImage;
+exports.personalImageSmall = personalImageSmall;
 exports.workExperienceImage = workExperienceImage;
 exports.scrollNav = scrollNav;
 exports.pHeaderStyle = pHeaderStyle;
@@ -16206,6 +16217,8 @@ var _temp = function () {
   __REACT_HOT_LOADER__.register(aboutMeImage, 'aboutMeImage', '/Users/ps/Projects/personal-projects/papa-site/src/styles/styles.js');
 
   __REACT_HOT_LOADER__.register(personalMeImage, 'personalMeImage', '/Users/ps/Projects/personal-projects/papa-site/src/styles/styles.js');
+
+  __REACT_HOT_LOADER__.register(personalImageSmall, 'personalImageSmall', '/Users/ps/Projects/personal-projects/papa-site/src/styles/styles.js');
 
   __REACT_HOT_LOADER__.register(workExperienceImage, 'workExperienceImage', '/Users/ps/Projects/personal-projects/papa-site/src/styles/styles.js');
 
