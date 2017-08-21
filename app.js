@@ -15412,7 +15412,7 @@ var Homepage = function (_Component) {
                 _react2.default.createElement(
                   _Paper2.default,
                   { zDepth: 0, style: {
-                      display: 'flex', flexDirection: 'column', height: '100%', width: '500px', fontWeight: 100, margin: '0px 40px 30px 10px' } },
+                      display: 'flex', flexDirection: 'column', height: '100%', width: '100%', fontWeight: 100, margin: '0px 40px 30px 10px' } },
                   _react2.default.createElement(
                     'h3',
                     { style: styles.pHeaderStyle },
@@ -16010,7 +16010,7 @@ var professionalDetailsPaper = {
 
 var professionalDetailsSmall = {
   height: '350px',
-  width: '70%',
+  width: '90%',
   margin: '10px'
 };
 
@@ -16040,7 +16040,7 @@ var professionalTextPaperStyle = {
 
 var professionalTextPaperSmall = {
   height: '350px',
-  width: '70%',
+  width: '90%',
   fontWeight: 100,
   fontSize: '18px'
 };
