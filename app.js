@@ -15420,7 +15420,7 @@ var Homepage = function (_Component) {
                   ),
                   _react2.default.createElement(
                     'div',
-                    { id: 'personalText', style: this.state.width > 757 ? styles.personalDetailsTextStyle : styles.personalDetailsTextSmall },
+                    { id: 'personalText', style: this.state.width > 800 ? styles.personalDetailsTextStyle : styles.personalDetailsTextSmall },
                     _configs2.default.content.personalDetails.sectionOne,
                     _react2.default.createElement('br', null),
                     _react2.default.createElement('br', null),
@@ -15457,10 +15457,10 @@ var Homepage = function (_Component) {
                 ),
                 _react2.default.createElement(
                   _Paper2.default,
-                  { zDepth: 0, style: this.state.width > 757 ? styles.professionalDetailsPaper : styles.professionalDetailsSmall },
+                  { zDepth: 0, style: this.state.width > 800 ? styles.professionalDetailsPaper : styles.professionalDetailsSmall },
                   _react2.default.createElement(
                     'div',
-                    { style: this.state.width > 757 ? styles.professionalRolesStyle : styles.professionalRolesSmall },
+                    { style: this.state.width > 800 ? styles.professionalRolesStyle : styles.professionalRolesSmall },
                     _react2.default.createElement(
                       'span',
                       null,
@@ -15508,7 +15508,7 @@ var Homepage = function (_Component) {
                 ),
                 _react2.default.createElement(
                   _Paper2.default,
-                  { zDepth: 0, style: this.state.width > 757 ? styles.professionalTextPaperStyle : styles.professionalTextPaperSmall },
+                  { zDepth: 0, style: this.state.width > 800 ? styles.professionalTextPaperStyle : styles.professionalTextPaperSmall },
                   _react2.default.createElement(
                     'h3',
                     { style: styles.pHeaderStyle },
@@ -15516,7 +15516,7 @@ var Homepage = function (_Component) {
                   ),
                   _react2.default.createElement(
                     'div',
-                    { style: this.state.width > 757 ? styles.professionalTextStyle : styles.professionalTextSmall },
+                    { style: this.state.width > 800 ? styles.professionalTextStyle : styles.professionalTextSmall },
                     _configs2.default.content.professionalDetails.sectionOne,
                     _react2.default.createElement('br', null),
                     _react2.default.createElement('br', null),
