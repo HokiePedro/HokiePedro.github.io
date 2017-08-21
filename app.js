@@ -15360,7 +15360,7 @@ var Homepage = function (_Component) {
               backgroundColor: '#D3CAC5',
               backgroundPosition: '22% 70%',
               backgroundSize: 'cover',
-              height: 1400,
+              height: 1600,
               width: this.state.width
             } },
           _react2.default.createElement(
