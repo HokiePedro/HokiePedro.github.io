@@ -15266,12 +15266,8 @@ var Homepage = function (_Component) {
   (0, _createClass3.default)(Homepage, [{
     key: 'updateDimensions',
     value: function updateDimensions() {
-      if (window.innerWidth < 500) {
-        this.setState({ width: 450 });
-      } else {
-        var update_width = window.innerWidth - 0;
-        this.setState({ width: update_width });
-      }
+      var update_width = window.innerWidth;
+      this.setState({ width: update_width });
     }
 
     /**
@@ -15342,6 +15338,9 @@ var Homepage = function (_Component) {
         );
       };
 
+      console.log('this.state.width');
+      console.log(this.state.width);
+
       return _react2.default.createElement(
         'div',
         { id: 'topContainer', style: { width: this.state.width, display: 'flex', flexDirection: 'column' } },
@@ -15395,245 +15394,243 @@ var Homepage = function (_Component) {
         ),
         _react2.default.createElement(
           'div',
-          { id: 'personalLife', style: {
-              display: 'flex',
-              flexDirection: 'row',
-              justifyContent: 'center',
-              margin: '20px 40px 160px 40px',
-              paddingTop: 120
-            } },
+          { style: { display: 'flex', flexDirection: 'column' } },
           _react2.default.createElement(
             'div',
-            { style: styles.personalLifeElements },
-            _react2.default.createElement(
-              'h5',
-              { style: styles.contentHeaderStyle },
-              _configs2.default.headers.sectionHeaders.personalLife
-            ),
+            { id: 'personalLife', style: styles.personalLifeContainer },
             _react2.default.createElement(
               'div',
-              { style: styles.personalDetailsContentStyle },
-              _react2.default.createElement(
-                _Paper2.default,
-                { zDepth: 0, style: {
-                    height: '350px', width: '500px', fontWeight: 100, margin: '0px 40px 30px 10px' } },
-                _react2.default.createElement(
-                  'h3',
-                  { style: styles.pHeaderStyle },
-                  _configs2.default.headers.contentHeaders.personalDetails
-                ),
-                _react2.default.createElement(
-                  'div',
-                  { id: '', style: styles.personalDetailsTextStyle },
-                  _configs2.default.content.personalDetails.sectionOne,
-                  _react2.default.createElement('br', null),
-                  _react2.default.createElement('br', null),
-                  _configs2.default.content.personalDetails.sectionTwo,
-                  _react2.default.createElement('br', null),
-                  _react2.default.createElement('br', null),
-                  _configs2.default.content.personalDetails.sectionThree
-                )
-              ),
-              _react2.default.createElement(_Paper2.default, { zDepth: 2, style: styles.personalMeImage })
-            )
-          )
-        ),
-        _react2.default.createElement(
-          'div',
-          { id: 'professionalLife', style: styles.professionalLifeContainer },
-          _react2.default.createElement(
-            'div',
-            { style: styles.professionalLifeContents },
-            _react2.default.createElement(
-              'h5',
-              { style: styles.contentHeaderStyle },
-              _configs2.default.headers.sectionHeaders.professionalLife
-            ),
-            _react2.default.createElement(
-              'div',
-              { id: 'iconsContainer', style: styles.professionalIconsContainer },
-              _react2.default.createElement(
-                _Paper2.default,
-                { zDepth: 1, style: styles.professionalLifePaperStyle },
-                (0, _keys2.default)(_configs2.default.paths.technologies).map(function (iconValues) {
-                  return _react2.default.createElement(_Avatar2.default, { key: iconValues, style: styles.avatarStyles, backgroundColor: _colors.white, size: 59, src: _configs2.default.paths.technologies[iconValues] });
-                })
-              ),
-              _react2.default.createElement(
-                _Paper2.default,
-                { zDepth: 0, style: styles.professionalDetailsPaper },
-                _react2.default.createElement(
-                  'div',
-                  { style: styles.professionalRolesStyle },
-                  _react2.default.createElement(
-                    'span',
-                    null,
-                    _react2.default.createElement(
-                      'b',
-                      null,
-                      'Name:'
-                    ),
-                    ' Pedro Sorto'
-                  ),
-                  _react2.default.createElement(_Divider2.default, null),
-                  _react2.default.createElement(
-                    'span',
-                    null,
-                    _react2.default.createElement(
-                      'b',
-                      null,
-                      'Company: '
-                    ),
-                    'Digital Globe'
-                  ),
-                  _react2.default.createElement(_Divider2.default, null),
-                  _react2.default.createElement(
-                    'span',
-                    null,
-                    _react2.default.createElement(
-                      'b',
-                      null,
-                      'Role: '
-                    ),
-                    'Software Developer'
-                  ),
-                  _react2.default.createElement(_Divider2.default, null),
-                  _react2.default.createElement(
-                    'div',
-                    null,
-                    _react2.default.createElement(
-                      'b',
-                      null,
-                      'Education: '
-                    ),
-                    'BS Computer Engineerin, Virginia Tech'
-                  )
-                )
-              ),
-              _react2.default.createElement(
-                _Paper2.default,
-                { zDepth: 0, style: styles.professionalTextPaperStyle },
-                _react2.default.createElement(
-                  'h3',
-                  { style: styles.pHeaderStyle },
-                  _configs2.default.headers.contentHeaders.professionalDetails
-                ),
-                _react2.default.createElement(
-                  'div',
-                  { style: styles.professionalTextStyle },
-                  _configs2.default.content.professionalDetails.sectionOne,
-                  _react2.default.createElement('br', null),
-                  _react2.default.createElement('br', null),
-                  _configs2.default.content.professionalDetails.sectionTwo
-                )
-              )
-            )
-          )
-        ),
-        _react2.default.createElement(
-          'div',
-          { id: 'experience', style: styles.experienceContainer },
-          _react2.default.createElement(
-            'div',
-            { style: styles.experienceRolesContainer },
-            _react2.default.createElement(
-              'div',
-              { style: styles.experienceHeaderStyle },
+              { style: styles.personalLifeElements },
               _react2.default.createElement(
                 'h5',
                 { style: styles.contentHeaderStyle },
-                _configs2.default.headers.sectionHeaders.experience
-              )
-            ),
-            (0, _keys2.default)(_configs2.default.experiences).map(function (experience) {
-              return _react2.default.createElement(
+                _configs2.default.headers.sectionHeaders.personalLife
+              ),
+              _react2.default.createElement(
                 'div',
-                { key: experience, style: styles.experiencesStyle },
+                { style: styles.personalDetailsContentStyle },
                 _react2.default.createElement(
-                  'div',
-                  { style: styles.experienceIconBorder },
+                  _Paper2.default,
+                  { zDepth: 0, style: {
+                      display: 'flex', flexDirection: 'column', height: '100%', width: '500px', fontWeight: 100, margin: '0px 40px 30px 10px' } },
                   _react2.default.createElement(
-                    _Paper2.default,
-                    { zDepth: 0, style: styles.workExperienceImage },
+                    'h3',
+                    { style: styles.pHeaderStyle },
+                    _configs2.default.headers.contentHeaders.personalDetails
+                  ),
+                  _react2.default.createElement(
+                    'div',
+                    { id: 'personalText', style: this.state.width > 757 ? styles.personalDetailsTextStyle : styles.personalDetailsTextSmall },
+                    _configs2.default.content.personalDetails.sectionOne,
+                    _react2.default.createElement('br', null),
+                    _react2.default.createElement('br', null),
+                    _configs2.default.content.personalDetails.sectionTwo,
+                    _react2.default.createElement('br', null),
+                    _react2.default.createElement('br', null),
+                    _configs2.default.content.personalDetails.sectionThree
+                  )
+                ),
+                _react2.default.createElement(_Paper2.default, { zDepth: 2, style: styles.personalMeImage })
+              )
+            )
+          ),
+          _react2.default.createElement(
+            'div',
+            { id: 'professionalLife', style: styles.professionalLifeContainer },
+            _react2.default.createElement(
+              'div',
+              { style: styles.professionalLifeContents },
+              _react2.default.createElement(
+                'h5',
+                { style: styles.contentHeaderStyle },
+                _configs2.default.headers.sectionHeaders.professionalLife
+              ),
+              _react2.default.createElement(
+                'div',
+                { id: 'iconsContainer', style: styles.professionalIconsContainer },
+                _react2.default.createElement(
+                  _Paper2.default,
+                  { zDepth: 1, style: styles.professionalLifePaperStyle },
+                  (0, _keys2.default)(_configs2.default.paths.technologies).map(function (iconValues) {
+                    return _react2.default.createElement(_Avatar2.default, { key: iconValues, style: styles.avatarStyles, backgroundColor: _colors.white, size: 59, src: _configs2.default.paths.technologies[iconValues] });
+                  })
+                ),
+                _react2.default.createElement(
+                  _Paper2.default,
+                  { zDepth: 0, style: this.state.width > 757 ? styles.professionalDetailsPaper : styles.professionalDetailsSmall },
+                  _react2.default.createElement(
+                    'div',
+                    { style: this.state.width > 757 ? styles.professionalRolesStyle : styles.professionalRolesSmall },
                     _react2.default.createElement(
-                      'a',
-                      { href: _configs2.default.experiences[experience].url, target: '_blank' },
-                      _react2.default.createElement('img', { style: { height: '85px' }, src: _configs2.default.experiences[experience].image })
+                      'span',
+                      null,
+                      _react2.default.createElement(
+                        'b',
+                        null,
+                        'Name:'
+                      ),
+                      ' Pedro Sorto'
+                    ),
+                    _react2.default.createElement(_Divider2.default, null),
+                    _react2.default.createElement(
+                      'span',
+                      null,
+                      _react2.default.createElement(
+                        'b',
+                        null,
+                        'Company: '
+                      ),
+                      'Digital Globe'
+                    ),
+                    _react2.default.createElement(_Divider2.default, null),
+                    _react2.default.createElement(
+                      'span',
+                      null,
+                      _react2.default.createElement(
+                        'b',
+                        null,
+                        'Role: '
+                      ),
+                      'Software Developer'
                     ),
                     _react2.default.createElement(_Divider2.default, null),
                     _react2.default.createElement(
                       'div',
-                      { style: styles.experienceYearFormat },
-                      _configs2.default.experiences[experience].year
+                      null,
+                      _react2.default.createElement(
+                        'b',
+                        null,
+                        'Education: '
+                      ),
+                      'BS Computer Engineerin, Virginia Tech'
                     )
                   )
                 ),
                 _react2.default.createElement(
                   _Paper2.default,
-                  { zDepth: 0, style: styles.experienceDetailsFormat },
+                  { zDepth: 0, style: this.state.width > 757 ? styles.professionalTextPaperStyle : styles.professionalTextPaperSmall },
                   _react2.default.createElement(
                     'h3',
-                    null,
-                    _configs2.default.experiences[experience].company
+                    { style: styles.pHeaderStyle },
+                    _configs2.default.headers.contentHeaders.professionalDetails
                   ),
                   _react2.default.createElement(
                     'div',
-                    { style: styles.experienceTitleFormat },
-                    _configs2.default.experiences[experience].title
+                    { style: this.state.width > 757 ? styles.professionalTextStyle : styles.professionalTextSmall },
+                    _configs2.default.content.professionalDetails.sectionOne,
+                    _react2.default.createElement('br', null),
+                    _react2.default.createElement('br', null),
+                    _configs2.default.content.professionalDetails.sectionTwo
                   )
                 )
-              );
-            })
-          )
-        ),
-        _react2.default.createElement(
-          'div',
-          { id: 'contact', style: styles.contactContainer },
+              )
+            )
+          ),
           _react2.default.createElement(
             'div',
-            { style: styles.contactIconContainer },
+            { id: 'experience', style: styles.experienceContainer },
             _react2.default.createElement(
               'div',
-              { style: styles.contactHeader },
-              _react2.default.createElement(
-                'h5',
-                { style: styles.contentHeaderStyle },
-                _configs2.default.headers.sectionHeaders.contactMe
-              )
-            ),
-            _react2.default.createElement(
-              _Paper2.default,
-              { zDepth: 0, style: { backgroundColor: 'none' } },
+              { style: styles.experienceRolesContainer },
               _react2.default.createElement(
                 'div',
-                { style: styles.iconButtonContainer },
+                { style: styles.experienceHeaderStyle },
                 _react2.default.createElement(
-                  _IconButton2.default,
-                  { href: _configs2.default.urls.github, target: '_blank', style: styles.urlIconButtons },
-                  ' ',
-                  _react2.default.createElement('img', { src: 'img/github.svg', height: '48px' }),
-                  ' '
-                ),
+                  'h5',
+                  { style: styles.contentHeaderStyle },
+                  _configs2.default.headers.sectionHeaders.experience
+                )
+              ),
+              (0, _keys2.default)(_configs2.default.experiences).map(function (experience) {
+                return _react2.default.createElement(
+                  'div',
+                  { key: experience, style: styles.experiencesStyle },
+                  _react2.default.createElement(
+                    'div',
+                    { style: styles.experienceIconBorder },
+                    _react2.default.createElement(
+                      _Paper2.default,
+                      { zDepth: 0, style: styles.workExperienceImage },
+                      _react2.default.createElement(
+                        'a',
+                        { href: _configs2.default.experiences[experience].url, target: '_blank' },
+                        _react2.default.createElement('img', { style: { height: '85px' }, src: _configs2.default.experiences[experience].image })
+                      ),
+                      _react2.default.createElement(_Divider2.default, null),
+                      _react2.default.createElement(
+                        'div',
+                        { style: styles.experienceYearFormat },
+                        _configs2.default.experiences[experience].year
+                      )
+                    )
+                  ),
+                  _react2.default.createElement(
+                    _Paper2.default,
+                    { zDepth: 0, style: styles.experienceDetailsFormat },
+                    _react2.default.createElement(
+                      'h3',
+                      null,
+                      _configs2.default.experiences[experience].company
+                    ),
+                    _react2.default.createElement(
+                      'div',
+                      { style: styles.experienceTitleFormat },
+                      _configs2.default.experiences[experience].title
+                    )
+                  )
+                );
+              })
+            )
+          ),
+          _react2.default.createElement(
+            'div',
+            { id: 'contact', style: styles.contactContainer },
+            _react2.default.createElement(
+              'div',
+              { style: styles.contactIconContainer },
+              _react2.default.createElement(
+                'div',
+                { style: styles.contactHeader },
                 _react2.default.createElement(
-                  _IconButton2.default,
-                  { href: _configs2.default.urls.linkedin, target: '_blank', style: styles.urlIconButtons },
-                  ' ',
-                  _react2.default.createElement('img', { src: 'img/linkedin.svg', height: '48px' }),
-                  ' '
-                ),
+                  'h5',
+                  { style: styles.contentHeaderStyle },
+                  _configs2.default.headers.sectionHeaders.contactMe
+                )
+              ),
+              _react2.default.createElement(
+                _Paper2.default,
+                { zDepth: 0, style: { backgroundColor: 'none' } },
                 _react2.default.createElement(
-                  _IconButton2.default,
-                  { href: _configs2.default.urls.gitlab, target: '_blank', style: styles.urlIconButtons },
-                  ' ',
-                  _react2.default.createElement('img', { src: 'img/gitlab.svg', height: '48px' }),
-                  ' '
-                ),
-                _react2.default.createElement(
-                  _IconButton2.default,
-                  { href: 'mailto:' + 'pedro.sorto@outlook.com', iconStyle: { width: '48px', height: '48px' }, style: styles.urlIconButtons },
-                  ' ',
-                  _react2.default.createElement(_email2.default, null),
-                  ' '
+                  'div',
+                  { style: styles.iconButtonContainer },
+                  _react2.default.createElement(
+                    _IconButton2.default,
+                    { href: _configs2.default.urls.github, target: '_blank', style: styles.urlIconButtons },
+                    ' ',
+                    _react2.default.createElement('img', { src: 'img/github.svg', height: '48px' }),
+                    ' '
+                  ),
+                  _react2.default.createElement(
+                    _IconButton2.default,
+                    { href: _configs2.default.urls.linkedin, target: '_blank', style: styles.urlIconButtons },
+                    ' ',
+                    _react2.default.createElement('img', { src: 'img/linkedin.svg', height: '48px' }),
+                    ' '
+                  ),
+                  _react2.default.createElement(
+                    _IconButton2.default,
+                    { href: _configs2.default.urls.gitlab, target: '_blank', style: styles.urlIconButtons },
+                    ' ',
+                    _react2.default.createElement('img', { src: 'img/gitlab.svg', height: '48px' }),
+                    ' '
+                  ),
+                  _react2.default.createElement(
+                    _IconButton2.default,
+                    { href: 'mailto:' + 'pedro.sorto@outlook.com', iconStyle: { width: '48px', height: '48px' }, style: styles.urlIconButtons },
+                    ' ',
+                    _react2.default.createElement(_email2.default, null),
+                    ' '
+                  )
                 )
               )
             )
@@ -15827,7 +15824,7 @@ var _temp = function () {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.iconMenuTextStyle = exports.contactHeader = exports.contactIconContainer = exports.contactContainer = exports.experienceTitleFormat = exports.experienceDetailsFormat = exports.experienceYearFormat = exports.experienceIconBorder = exports.iconButtonContainer = exports.experiencesStyle = exports.experienceHeaderStyle = exports.experienceRolesContainer = exports.experienceContainer = exports.professionalTextStyle = exports.professionalTextPaperStyle = exports.professionalRolesStyle = exports.professionalDetailsPaper = exports.professionalLifePaperStyle = exports.professionalIconsContainer = exports.professionalLifeContents = exports.professionalLifeContainer = exports.personalDetailsContentStyle = exports.personalDetailsTextStyle = exports.personalDetailsStyle = exports.personalLifeElements = exports.titleStyling = exports.personalLifeContainer = exports.appBarNameStyle = exports.avatarStyles = exports.urlIconButtons = exports.pHeaderStyle = exports.scrollNav = exports.workExperienceImage = exports.personalMeImage = exports.aboutMeImage = exports.root = exports.landing = exports.contentHeaderStyle = exports.nameHeaderStyle = exports.appBarStyle = exports.GridStyle = exports.rightElementStyling = exports.mainContainer = undefined;
+exports.professionalDetailsSmall = exports.personalDetailsTextSmall = exports.iconMenuTextStyle = exports.contactHeader = exports.contactIconContainer = exports.contactContainer = exports.experienceTitleFormat = exports.experienceDetailsFormat = exports.experienceYearFormat = exports.experienceIconBorder = exports.iconButtonContainer = exports.experiencesStyle = exports.experienceHeaderStyle = exports.experienceRolesContainer = exports.experienceContainer = exports.professionalTextSmall = exports.professionalTextStyle = exports.professionalTextPaperSmall = exports.professionalTextPaperStyle = exports.professionalRolesSmall = exports.professionalRolesStyle = exports.professionalDetailsPaper = exports.professionalLifePaperStyle = exports.professionalIconsContainer = exports.professionalLifeContents = exports.professionalLifeContainer = exports.personalDetailsContentStyle = exports.personalDetailsTextStyle = exports.personalDetailsStyle = exports.personalLifeElements = exports.titleStyling = exports.personalLifeContainer = exports.appBarNameStyle = exports.avatarStyles = exports.urlIconButtons = exports.pHeaderStyle = exports.scrollNav = exports.workExperienceImage = exports.personalMeImage = exports.aboutMeImage = exports.root = exports.landing = exports.contentHeaderStyle = exports.nameHeaderStyle = exports.appBarStyle = exports.GridStyle = exports.rightElementStyling = exports.mainContainer = undefined;
 
 var _defineProperty2 = __webpack_require__(186);
 
@@ -15954,6 +15951,16 @@ var personalDetailsTextStyle = {
   fontFamily: 'sans-serif',
   lineHeight: 2
 };
+
+var personalDetailsTextSmall = {
+  display: 'flex',
+  flexDirection: 'column',
+  fontSize: '18px',
+  fontFamily: 'sans-serif',
+  lineHeight: 2,
+  width: '100%'
+};
+
 var personalDetailsContentStyle = {
   display: 'flex',
   flexDirection: 'row',
@@ -15990,6 +15997,13 @@ var professionalDetailsPaper = {
   width: '350px',
   margin: '10px'
 };
+
+var professionalDetailsSmall = {
+  height: '350px',
+  width: '70%',
+  margin: '10px'
+};
+
 var professionalRolesStyle = {
   display: 'flex',
   flexDirection: 'column',
@@ -15998,11 +16012,29 @@ var professionalRolesStyle = {
   lineHeight: 4,
   margin: '10px'
 };
+
+var professionalRolesSmall = {
+  display: 'flex',
+  flexDirection: 'column',
+  fontSize: '18px',
+  fontFamily: 'sans-serif',
+  lineHeight: 4,
+  margin: '10px'
+};
+
 var professionalTextPaperStyle = {
   height: '350px',
   width: '500px',
   fontWeight: 100
 };
+
+var professionalTextPaperSmall = {
+  height: '350px',
+  width: '70%',
+  fontWeight: 100,
+  fontSize: '18px'
+};
+
 var professionalTextStyle = {
   display: 'flex',
   flexDirection: 'column',
@@ -16010,6 +16042,15 @@ var professionalTextStyle = {
   fontFamily: 'sans-serif',
   lineHeight: 2
 };
+
+var professionalTextSmall = {
+  display: 'flex',
+  flexDirection: 'column',
+  fontSize: '18px',
+  fontFamily: 'sans-serif',
+  lineHeight: 2
+};
+
 var experienceContainer = {
   display: 'flex',
   flexDirection: 'row',
@@ -16119,8 +16160,11 @@ exports.professionalIconsContainer = professionalIconsContainer;
 exports.professionalLifePaperStyle = professionalLifePaperStyle;
 exports.professionalDetailsPaper = professionalDetailsPaper;
 exports.professionalRolesStyle = professionalRolesStyle;
+exports.professionalRolesSmall = professionalRolesSmall;
 exports.professionalTextPaperStyle = professionalTextPaperStyle;
+exports.professionalTextPaperSmall = professionalTextPaperSmall;
 exports.professionalTextStyle = professionalTextStyle;
+exports.professionalTextSmall = professionalTextSmall;
 exports.experienceContainer = experienceContainer;
 exports.experienceRolesContainer = experienceRolesContainer;
 exports.experienceHeaderStyle = experienceHeaderStyle;
@@ -16134,6 +16178,8 @@ exports.contactContainer = contactContainer;
 exports.contactIconContainer = contactIconContainer;
 exports.contactHeader = contactHeader;
 exports.iconMenuTextStyle = iconMenuTextStyle;
+exports.personalDetailsTextSmall = personalDetailsTextSmall;
+exports.professionalDetailsSmall = professionalDetailsSmall;
 ;
 
 var _temp = function () {
@@ -16183,6 +16229,8 @@ var _temp = function () {
 
   __REACT_HOT_LOADER__.register(personalDetailsTextStyle, 'personalDetailsTextStyle', '/Users/ps/Projects/personal-projects/papa-site/src/styles/styles.js');
 
+  __REACT_HOT_LOADER__.register(personalDetailsTextSmall, 'personalDetailsTextSmall', '/Users/ps/Projects/personal-projects/papa-site/src/styles/styles.js');
+
   __REACT_HOT_LOADER__.register(personalDetailsContentStyle, 'personalDetailsContentStyle', '/Users/ps/Projects/personal-projects/papa-site/src/styles/styles.js');
 
   __REACT_HOT_LOADER__.register(professionalLifeContainer, 'professionalLifeContainer', '/Users/ps/Projects/personal-projects/papa-site/src/styles/styles.js');
@@ -16195,11 +16243,19 @@ var _temp = function () {
 
   __REACT_HOT_LOADER__.register(professionalDetailsPaper, 'professionalDetailsPaper', '/Users/ps/Projects/personal-projects/papa-site/src/styles/styles.js');
 
+  __REACT_HOT_LOADER__.register(professionalDetailsSmall, 'professionalDetailsSmall', '/Users/ps/Projects/personal-projects/papa-site/src/styles/styles.js');
+
   __REACT_HOT_LOADER__.register(professionalRolesStyle, 'professionalRolesStyle', '/Users/ps/Projects/personal-projects/papa-site/src/styles/styles.js');
+
+  __REACT_HOT_LOADER__.register(professionalRolesSmall, 'professionalRolesSmall', '/Users/ps/Projects/personal-projects/papa-site/src/styles/styles.js');
 
   __REACT_HOT_LOADER__.register(professionalTextPaperStyle, 'professionalTextPaperStyle', '/Users/ps/Projects/personal-projects/papa-site/src/styles/styles.js');
 
+  __REACT_HOT_LOADER__.register(professionalTextPaperSmall, 'professionalTextPaperSmall', '/Users/ps/Projects/personal-projects/papa-site/src/styles/styles.js');
+
   __REACT_HOT_LOADER__.register(professionalTextStyle, 'professionalTextStyle', '/Users/ps/Projects/personal-projects/papa-site/src/styles/styles.js');
+
+  __REACT_HOT_LOADER__.register(professionalTextSmall, 'professionalTextSmall', '/Users/ps/Projects/personal-projects/papa-site/src/styles/styles.js');
 
   __REACT_HOT_LOADER__.register(experienceContainer, 'experienceContainer', '/Users/ps/Projects/personal-projects/papa-site/src/styles/styles.js');
 
