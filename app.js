@@ -15951,7 +15951,8 @@ var personalLifeElements = {
 var personalDetailsStyle = {
   display: 'flex',
   flexDirection: 'column',
-  height: '100%', width: '100%',
+  height: '100%',
+  width: '350px',
   fontWeight: 100,
   margin: '0px 40px 30px 10px'
 };
