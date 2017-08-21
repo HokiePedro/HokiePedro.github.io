@@ -16051,10 +16051,13 @@ var professionalTextPaperStyle = {
 };
 
 var professionalTextPaperSmall = {
-  height: '350px',
+  display: 'flex',
+  flexDirection: 'column',
+  fontSize: '18px',
+  fontFamily: 'sans-serif',
+  lineHeight: 2,
   width: '90%',
-  fontWeight: 100,
-  fontSize: '18px'
+  fontWeight: 100
 };
 
 var professionalTextStyle = {
