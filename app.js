@@ -15411,8 +15411,7 @@ var Homepage = function (_Component) {
                 { style: styles.personalDetailsContentStyle },
                 _react2.default.createElement(
                   _Paper2.default,
-                  { zDepth: 0, style: {
-                      display: 'flex', flexDirection: 'column', height: '100%', width: '100%', fontWeight: 100, margin: '0px 40px 30px 10px' } },
+                  { zDepth: 0, style: this.state.width > 1000 ? styles.personalDetailsStyle : styles.personalDetailsSmall },
                   _react2.default.createElement(
                     'h3',
                     { style: styles.pHeaderStyle },
@@ -15828,7 +15827,7 @@ var _temp = function () {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.professionalDetailsSmall = exports.personalDetailsTextSmall = exports.iconMenuTextStyle = exports.contactHeader = exports.contactIconContainer = exports.contactContainer = exports.experienceTitleFormat = exports.experienceDetailsFormat = exports.experienceYearFormat = exports.experienceIconBorder = exports.iconButtonContainer = exports.experiencesStyle = exports.experienceHeaderStyle = exports.experienceRolesContainer = exports.experienceContainer = exports.professionalTextSmall = exports.professionalTextStyle = exports.professionalTextPaperSmall = exports.professionalTextPaperStyle = exports.professionalRolesSmall = exports.professionalRolesStyle = exports.professionalDetailsPaper = exports.professionalLifePaperStyle = exports.professionalIconsContainer = exports.professionalLifeContents = exports.professionalLifeContainer = exports.personalDetailsContentStyle = exports.personalDetailsTextStyle = exports.personalDetailsStyle = exports.personalLifeElements = exports.titleStyling = exports.personalLifeContainer = exports.appBarNameStyle = exports.avatarStyles = exports.urlIconButtons = exports.pHeaderStyle = exports.scrollNav = exports.workExperienceImage = exports.personalImageSmall = exports.personalMeImage = exports.aboutMeImage = exports.root = exports.landing = exports.contentHeaderStyle = exports.nameHeaderStyle = exports.appBarStyle = exports.GridStyle = exports.rightElementStyling = exports.mainContainer = undefined;
+exports.professionalDetailsSmall = exports.personalDetailsTextSmall = exports.iconMenuTextStyle = exports.contactHeader = exports.contactIconContainer = exports.contactContainer = exports.experienceTitleFormat = exports.experienceDetailsFormat = exports.experienceYearFormat = exports.experienceIconBorder = exports.iconButtonContainer = exports.experiencesStyle = exports.experienceHeaderStyle = exports.experienceRolesContainer = exports.experienceContainer = exports.professionalTextSmall = exports.professionalTextStyle = exports.professionalTextPaperSmall = exports.professionalTextPaperStyle = exports.professionalRolesSmall = exports.professionalRolesStyle = exports.professionalDetailsPaper = exports.professionalLifePaperStyle = exports.professionalIconsContainer = exports.professionalLifeContents = exports.professionalLifeContainer = exports.personalDetailsContentStyle = exports.personalDetailsTextStyle = exports.personalDetailsSmall = exports.personalDetailsStyle = exports.personalLifeElements = exports.titleStyling = exports.personalLifeContainer = exports.appBarNameStyle = exports.avatarStyles = exports.urlIconButtons = exports.pHeaderStyle = exports.scrollNav = exports.workExperienceImage = exports.personalImageSmall = exports.personalMeImage = exports.aboutMeImage = exports.root = exports.landing = exports.contentHeaderStyle = exports.nameHeaderStyle = exports.appBarStyle = exports.GridStyle = exports.rightElementStyling = exports.mainContainer = undefined;
 
 var _defineProperty2 = __webpack_require__(186);
 
@@ -15948,12 +15947,24 @@ var personalLifeElements = {
   flexDirection: 'column',
   alignItems: 'center'
 };
+
 var personalDetailsStyle = {
-  height: '350px',
-  width: '350px',
+  display: 'flex',
+  flexDirection: 'column',
+  height: '100%', width: '100%',
   fontWeight: 100,
-  margin: '0px 0px 30px 0px'
+  margin: '0px 40px 30px 10px'
 };
+
+var personalDetailsSmall = {
+  display: 'flex',
+  flexDirection: 'column',
+  height: '100%', width: '100%',
+  fontWeight: 100,
+  margin: '0px 40px 30px 10px',
+  fontSize: '18px'
+};
+
 var personalDetailsTextStyle = {
   display: 'flex',
   flexDirection: 'column',
@@ -16163,6 +16174,7 @@ exports.personalLifeContainer = personalLifeContainer;
 exports.titleStyling = titleStyling;
 exports.personalLifeElements = personalLifeElements;
 exports.personalDetailsStyle = personalDetailsStyle;
+exports.personalDetailsSmall = personalDetailsSmall;
 exports.personalDetailsTextStyle = personalDetailsTextStyle;
 exports.personalDetailsContentStyle = personalDetailsContentStyle;
 exports.professionalLifeContainer = professionalLifeContainer;
@@ -16239,6 +16251,8 @@ var _temp = function () {
   __REACT_HOT_LOADER__.register(personalLifeElements, 'personalLifeElements', '/Users/ps/Projects/personal-projects/papa-site/src/styles/styles.js');
 
   __REACT_HOT_LOADER__.register(personalDetailsStyle, 'personalDetailsStyle', '/Users/ps/Projects/personal-projects/papa-site/src/styles/styles.js');
+
+  __REACT_HOT_LOADER__.register(personalDetailsSmall, 'personalDetailsSmall', '/Users/ps/Projects/personal-projects/papa-site/src/styles/styles.js');
 
   __REACT_HOT_LOADER__.register(personalDetailsTextStyle, 'personalDetailsTextStyle', '/Users/ps/Projects/personal-projects/papa-site/src/styles/styles.js');
 
